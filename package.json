@@ -7,7 +7,8 @@
     "webpack": "babel-node ./node_modules/webpack/bin/webpack",
     "start": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server --open",
     "format": "prettier --write '**/*.{js,jsx,html,scss}'",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "prettier-watch": "onchange '**/*.{js,jsx,html,scss}' -- prettier --write {{changed}}"
   },
   "lint-staged": {
     "*.{js,jsx,html,scss}": [
@@ -51,6 +52,7 @@
     "react-chartist": "^0.13.1",
     "react-dom": "16.8.6",
     "react-google-maps": "^9.4.5",
+    "react-materialize": "^3.3.1",
     "react-router-dom": "^4.3.1",
     "react-swipeable-views": "^0.12.15"
   }
