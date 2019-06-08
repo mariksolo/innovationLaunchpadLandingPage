@@ -39,3 +39,17 @@
 @import 'components/pulse';
 @import 'components/datepicker';
 @import 'components/timepicker';
+
+// added
+
+.mainText {
+  color: #ff9800;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    'Helvetica Neue', sans-serif;
+}
+
+.secondaryText {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    'Helvetica Neue', sans-serif;
+}
