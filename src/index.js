@@ -12,7 +12,9 @@ import {
   Navbar,
   NavItem,
   TextInput,
-  Container
+  Container,
+  Section,
+  Footer,
 } from 'react-materialize';
 import IL3 from 'IL3.jpg';
 import ilp from 'ilp.jpg';
@@ -43,73 +45,122 @@ class Home extends React.Component {
         </Navbar>
 
         <br />
-        <Row>
-          <Col l={5} offset="l1" className="homeImage">
-            <img src={ilp} />
-          </Col>
+        <Section>
+          <Row>
+            <Col l={4} offset="l1">
+              <br />
+              <br />
+              <br />
+              <img src={ilp} className="homeImage" />
+            </Col>
 
-          <Col l={4} offset="l1" className="homeForm">
-            <br />
-            <br />
+            <Col l={6} offset="l1" className="homeForm">
+              <br />
+              <br />
+              <Row>
+                <h3 className="mainText">
+                  Try the world's #1 CRM built for small business growth.
+                </h3>
+              </Row>
+              <Row>
+                <h5 className="secondaryText">
+                  Get Salesforce essentials, our all-in-one sales and service solution for just $25
+                  a month.
+                </h5>
+              </Row>
+              <Row>
+                <TextInput label="Full Name" id="name" onChange={this.handleChange} />
+
+                <TextInput
+                  email
+                  label="Email"
+                  id="email"
+                  error="Invalid Email"
+                  onChange={this.handleChange}
+                />
+              </Row>
+              <Row>
+                <Button waves="light" onClick={this.handleSubmit}>
+                  button
+                </Button>
+              </Row>
+            </Col>
+          </Row>
+        </Section>
+
+        <br />
+        <br />
+        <br />
+
+        <Container>
+          <Section>
             <Row>
-              <h2 className="mainText">Try the world's #1 CRM built for small business growth.</h2>
-            </Row>
-            <Row>
-              <h5 className="secondaryText">
-                Get Salesforce essentials, our all-in-one sales and service solution for just $25 a
-                month.
-              </h5>
-            </Row>
-            <Row>
-              <TextInput label="Full Name" id="name" onChange={this.handleChange} />
+              <Col m={4}>
+                <div>
+                  <div className="center">
+                    <Icon medium className="textIcon"> web</Icon>
+                    <h5 className = "columnHeader">Entrepreneurship</h5>
+                  </div>
+                  <p className="textColumn light">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et
+                    efficitur velit. Proin mattis neque a enim sollicitudin, id tincidunt eros
+                    faucibus. Curabitur vitae tellus sollicitudin, venenatis massa sed, blandit
+                    mauris. Cras lacinia id ante ac ultrices. Sed ac ex iaculis, convallis turpis
+                    scelerisque, ullamcorper justo.
+                  </p>
+                </div>
+              </Col>
 
-              <TextInput
-                email
-                label="Email"
-                id="email"
-                error="Invalid Email"
-                onChange={this.handleChange}
-              />
+              <Col m={4}>
+                <div>
+                  <div className="center">
+                    <Icon medium className="textIcon">code</Icon>
+                    <h5>Technology</h5>
+                  </div>
+                  <p className="textColumn light">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et
+                    efficitur velit. Proin mattis neque a enim sollicitudin, id tincidunt eros
+                    faucibus. Curabitur vitae tellus sollicitudin, venenatis massa sed, blandit
+                    mauris. Cras lacinia id ante ac ultrices. Sed ac ex iaculis, convallis turpis
+                    scelerisque, ullamcorper justo.
+                  </p>
+                </div>
+              </Col>
+
+              <Col m={4}>
+                <div>
+                  <div className="center">
+                    <Icon medium className="textIcon">next_week</Icon>
+                    <h5>Opportunities</h5>
+                  </div>
+
+                  <p className="textColumn light">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et
+                    efficitur velit. Proin mattis neque a enim sollicitudin, id tincidunt eros
+                    faucibus. Curabitur vitae tellus sollicitudin, venenatis massa sed, blandit
+                    mauris. Cras lacinia id ante ac ultrices. Sed ac ex iaculis, convallis turpis
+                    scelerisque, ullamcorper justo.
+                  </p>
+
+                  <textArea> asdfasf</textArea>
+                </div>
+              </Col>
             </Row>
-            <Row>
-              <Button waves="light" onClick={this.handleSubmit}>
-                button
-              </Button>
-            </Row>
-          </Col>
-        </Row>
+          </Section>
+        </Container>
 
-        <Row>
-          <Col l={2}>
-            <Icon medium>cloud</Icon>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et efficitur
-              velit. Proin mattis neque a enim sollicitudin, id tincidunt eros faucibus. Curabitur
-              vitae tellus sollicitudin, venenatis massa sed, blandit mauris. Cras lacinia id ante
-              ac ultrices. Sed ac ex iaculis, convallis turpis scelerisque, ullamcorper justo.
-            </p>
-          </Col>
+        <Footer className="contactFooter orange">
+        <Container>
+          <Section>
+            <Col>
+            <TextInput label="Message" type='footer'className="footerTextInput"/>
+            <TextInput email label="Email" type='search'className="footerTextInput"/>
+            </Col>
+          </Section>
+        </Container>
+        
 
-          <Col l={2}>
-            <Icon medium>cloud</Icon>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et efficitur
-              velit. Proin mattis neque a enim sollicitudin, id tincidunt eros faucibus. Curabitur
-              vitae tellus sollicitudin, venenatis massa sed, blandit mauris. Cras lacinia id ante
-              ac ultrices. Sed ac ex iaculis, convallis turpis scelerisque, ullamcorper justo.
-            </p>
-          </Col>
-
-          <Col l={2}>
-            <Icon medium>cloud</Icon>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et efficitur
-              velit. Proin mattis neque a enim sollicitudin, id tincidunt eros faucibus. Curabitur
-              vitae tellus sollicitudin, venenatis massa sed, blandit mauris. Cras lacinia id ante
-              ac ultrices. Sed ac ex iaculis, convallis turpis scelerisque, ullamcorper justo.
-            </p>
-          </Col>
-        </Row>
+        </Footer>
       </div>
     );
   }

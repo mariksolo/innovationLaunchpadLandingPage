@@ -41,7 +41,6 @@
 @import 'components/timepicker';
 
 // added
-
 .mainText {
   color: #ff9800;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
@@ -53,3 +52,36 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
     'Helvetica Neue', sans-serif;
 }
+
+.homeImage {
+  width: 100%;
+}
+
+.textColumn {
+  padding: 0 15px;
+  font-size: 1.25rem;
+  
+}
+
+.columnHeader {
+  font-size: 1.64rem;
+  line-height: 110%;
+  margin: 1.0933333333rem 0 .656rem 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+'Helvetica Neue';
+}
+
+.textIcon {
+  color: #03a9f4;
+}
+
+
+
+// textarea.materialize-textarea {
+//   // background-color: white;
+
+//   &:focus:not([readonly]) {
+//     border-bottom: 1px solid white;
+//     box-shadow: 0 1px 0 0 $input-focus-color;
+//   }
+// }
