@@ -14,12 +14,15 @@ import {
   TextInput,
   Container,
   Section,
-  Footer
+  Footer,
+  Parallax
 } from 'react-materialize';
 import IL3 from 'IL3.jpg';
 import ilp from 'ilp.jpg';
 import ilp2 from 'ilp2.jpg';
 import ilp3 from 'ilp3.jpg';
+import image1 from 'arif-riyanto-974674-unsplash.jpg';
+import image2 from 'chris-ried-512801-unsplash.jpg';
 
 class Home extends React.Component {
   constructor(props) {
@@ -45,6 +48,7 @@ class Home extends React.Component {
         </Navbar>
 
         <br />
+        {/* <Parallax image={<img src={image1} />} options={10000}/> */}
         <Container>
           <Section>
             <Row>
@@ -94,11 +98,12 @@ class Home extends React.Component {
                 <br />
                 <br />
                 <br />
-                <img src={ilp} className="homeImage" />
+                {/* <img src={ilp} className="homeImage" /> */}
               </Col>
             </Row>
           </Section>
         </Container>
+        {/* <Parallax image={<img src={image2} />} /> */}
 
         <br />
         <br />

@@ -40,6 +40,8 @@
 @import 'components/datepicker';
 @import 'components/timepicker';
 
+// @import '../../arif-riyanto-974674-unsplash.jpg';
+
 // added
 .mainText {
   color: #ff9800;
@@ -82,6 +84,18 @@
 
 .footerText {
   font-size: 15px;
+}
+
+:root {
+  background-image: 'arif-riyanto-974674-unsplash';
+}
+
+body {
+  background: url('../../src/antonino-visalli-1318777-unsplash.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 // textarea.materialize-textarea {
