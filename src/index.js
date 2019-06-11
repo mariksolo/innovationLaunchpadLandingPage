@@ -51,8 +51,8 @@ class Home extends React.Component {
         {/* <Parallax image={<img src={image1} />} options={10000}/> */}
         <Container>
           <Section>
-            <Row>
-              <Col l={5} offset="l" className="homeForm">
+            <Row className="homeForm">
+              <Col l={5} offset="l" >
                 <Row>
                   <br />
                   <br />
@@ -92,14 +92,7 @@ class Home extends React.Component {
                   </Button>
                 </Row>
               </Col>
-              <Col l={6} offset="l1">
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                {/* <img src={ilp} className="homeImage" /> */}
-              </Col>
+
             </Row>
           </Section>
         </Container>
