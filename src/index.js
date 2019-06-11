@@ -52,16 +52,16 @@ class Home extends React.Component {
         <Container>
           <Section>
             <Row className="homeForm">
-              <Col l={5} offset="l" >
+              <Col l={6} offset="l">
                 <Row>
                   <br />
                   <br />
                   <br />
                   <br />
                   <br />
-                  <h3 className="mainText">
+                  <h1 className="mainText">
                     Try the world's #1 CRM built for small business growth.
-                  </h3>
+                  </h1>
                 </Row>
                 <Row>
                   <h5 className="secondaryText">
@@ -73,7 +73,7 @@ class Home extends React.Component {
                   <TextInput
                     label="Full Name"
                     id="name"
-                    type="front"
+                    className="textArea"
                     onChange={this.handleChange}
                   />
 
@@ -82,6 +82,7 @@ class Home extends React.Component {
                     label="Email"
                     id="email"
                     error="Invalid Email"
+                    className="textArea"
                     onChange={this.handleChange}
                     type="front"
                   />
@@ -92,7 +93,6 @@ class Home extends React.Component {
                   </Button>
                 </Row>
               </Col>
-
             </Row>
           </Section>
         </Container>
@@ -101,71 +101,69 @@ class Home extends React.Component {
         <br />
         <br />
         <br />
-
-        <Container>
-          <Section>
-            <Row>
-              <Col m={4}>
-                <div>
-                  <div className="center">
-                    <Icon medium className="textIcon">
-                      {' '}
-                      web
-                    </Icon>
-                    <h5 className="columnHeader">Entrepreneurship</h5>
+        <div className="textColumns">
+          <Container>
+            <Section>
+              <Row>
+                <Col m={4}>
+                  <div>
+                    <div className="center">
+                      <Icon medium className="textIcon">
+                        {' '}
+                        web
+                      </Icon>
+                      <h5 className="columnHeader">Entrepreneurship</h5>
+                    </div>
+                    <p className="textColumn light">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et
+                      efficitur velit. Proin mattis neque a enim sollicitudin, id tincidunt eros
+                      faucibus. Curabitur vitae tellus sollicitudin, venenatis massa sed, blandit
+                      mauris. Cras lacinia id ante ac ultrices. Sed ac ex iaculis, convallis turpis
+                      scelerisque, ullamcorper justo.
+                    </p>
                   </div>
-                  <p className="textColumn light">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et
-                    efficitur velit. Proin mattis neque a enim sollicitudin, id tincidunt eros
-                    faucibus. Curabitur vitae tellus sollicitudin, venenatis massa sed, blandit
-                    mauris. Cras lacinia id ante ac ultrices. Sed ac ex iaculis, convallis turpis
-                    scelerisque, ullamcorper justo.
-                  </p>
-                </div>
-              </Col>
+                </Col>
 
-              <Col m={4}>
-                <div>
-                  <div className="center">
-                    <Icon medium className="textIcon">
-                      code
-                    </Icon>
-                    <h5>Technology</h5>
+                <Col m={4}>
+                  <div>
+                    <div className="center">
+                      <Icon medium className="textIcon">
+                        code
+                      </Icon>
+                      <h5>Technology</h5>
+                    </div>
+                    <p className="textColumn light">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et
+                      efficitur velit. Proin mattis neque a enim sollicitudin, id tincidunt eros
+                      faucibus. Curabitur vitae tellus sollicitudin, venenatis massa sed, blandit
+                      mauris. Cras lacinia id ante ac ultrices. Sed ac ex iaculis, convallis turpis
+                      scelerisque, ullamcorper justo.
+                    </p>
                   </div>
-                  <p className="textColumn light">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et
-                    efficitur velit. Proin mattis neque a enim sollicitudin, id tincidunt eros
-                    faucibus. Curabitur vitae tellus sollicitudin, venenatis massa sed, blandit
-                    mauris. Cras lacinia id ante ac ultrices. Sed ac ex iaculis, convallis turpis
-                    scelerisque, ullamcorper justo.
-                  </p>
-                </div>
-              </Col>
+                </Col>
 
-              <Col m={4}>
-                <div>
-                  <div className="center">
-                    <Icon medium className="textIcon">
-                      next_week
-                    </Icon>
-                    <h5>Opportunities</h5>
+                <Col m={4}>
+                  <div>
+                    <div className="center">
+                      <Icon medium className="textIcon">
+                        next_week
+                      </Icon>
+                      <h5>Opportunities</h5>
+                    </div>
+
+                    <p className="textColumn light">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et
+                      efficitur velit. Proin mattis neque a enim sollicitudin, id tincidunt eros
+                      faucibus. Curabitur vitae tellus sollicitudin, venenatis massa sed, blandit
+                      mauris. Cras lacinia id ante ac ultrices. Sed ac ex iaculis, convallis turpis
+                      scelerisque, ullamcorper justo.
+                    </p>
                   </div>
-
-                  <p className="textColumn light">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et
-                    efficitur velit. Proin mattis neque a enim sollicitudin, id tincidunt eros
-                    faucibus. Curabitur vitae tellus sollicitudin, venenatis massa sed, blandit
-                    mauris. Cras lacinia id ante ac ultrices. Sed ac ex iaculis, convallis turpis
-                    scelerisque, ullamcorper justo.
-                  </p>
-                </div>
-              </Col>
-            </Row>
-          </Section>
-        </Container>
-        <br />
-        <br />
-        <br />
+                </Col>
+              </Row>
+            </Section>
+          </Container>
+        </div>
 
         <Footer className="orange">
           <Container>
