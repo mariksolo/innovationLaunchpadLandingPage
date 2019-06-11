@@ -22,6 +22,7 @@ input[type='tel']:not(.browser-default),
 input[type='number']:not(.browser-default),
 input[type='search']:not(.browser-default),
 input[type='footer']:not(.browser-default), // added
+input[type='front']:not(.browser-default), // added
 textarea.materialize-textarea {
   // General Styles
   background-color: transparent;
@@ -144,6 +145,7 @@ textarea.materialize-textarea {
 }
 
 // Styling for input field wrapper
+
 .input-field {
   // Inline styles
   &.inline {
@@ -257,12 +259,10 @@ textarea.materialize-textarea {
   }
 }
 
-// added
-.input-field input[type='footer'] {
-    // General Styles
+.input-field input[type='front'] {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid white;
+  border-bottom: $input-border;
   border-radius: 0;
   outline: none;
   height: $input-height;
@@ -273,16 +273,19 @@ textarea.materialize-textarea {
   box-shadow: none;
   box-sizing: content-box;
   transition: box-shadow 0.3s, border 0.3s;
-  ::placeholder {
-    color: $placeholder-text-color;
+  // color: #9e9e9e;
+  .label {
+    color: #9e9e9e;
   }
- 
+  label {
+    color: #9e9e9e;
+  }
 
   // Disabled input style
   &:disabled,
   &[readonly='readonly'] {
-    color: white;
-    border-bottom: white;
+    color: $input-disabled-color;
+    border-bottom: $input-disabled-border;
   }
 
   // Disabled label style
@@ -293,13 +296,13 @@ textarea.materialize-textarea {
 
   // Focused input style
   &:focus:not([readonly]) {
-    border-bottom: 1px solid white;
-    box-shadow: 0 1px 0 0 white;
+    border-bottom: 1px solid $input-focus-color;
+    box-shadow: 0 1px 0 0 $input-focus-color;
   }
 
   // Focused label style
   &:focus:not([readonly]) + label {
-    color: white;
+    color: $input-focus-color;
   }
 
   // Hide helper text on data message
@@ -351,7 +354,103 @@ textarea.materialize-textarea {
   }
 }
 
+// added
+.input-field input[type='footer'] {
+  // General Styles
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  border-radius: 0;
+  outline: none;
+  height: $input-height;
+  width: 100%;
+  font-size: $input-font-size;
+  margin: $input-margin;
+  padding: $input-padding;
+  box-shadow: none;
+  box-sizing: content-box;
+  transition: box-shadow 0.3s, border 0.3s;
+  color: white;
+  .label {
+    color: white;
+  }
 
+  // Disabled input style
+  &:disabled,
+  &[readonly='readonly'] {
+    color: white;
+    border-bottom: white;
+  }
+
+  // Disabled label style
+  &:disabled + label,
+  &[readonly='readonly'] + label {
+    color: white;
+  }
+
+  // Focused input style
+  &:focus:not([readonly]) {
+    border-bottom: 1px solid white;
+    box-shadow: 0 1px 0 0 white;
+  }
+
+  // Focused label style
+  &:focus:not([readonly]) + label {
+    color: white;
+  }
+
+  label {
+    color: white;
+  }
+
+  // Hide helper text on data message
+  &.valid ~ .helper-text[data-success],
+  &:focus.valid ~ .helper-text[data-success],
+  &.invalid ~ .helper-text[data-error],
+  &:focus.invalid ~ .helper-text[data-error] {
+    @extend %hidden-text;
+  }
+
+  // Valid Input Style
+  &.valid,
+  &:focus.valid {
+    @extend %valid-input-style;
+  }
+
+  // Custom Success Message
+  &.valid ~ .helper-text:after,
+  &:focus.valid ~ .helper-text:after {
+    @extend %custom-success-message;
+  }
+  &:focus.valid ~ label {
+    color: white;
+  }
+
+  // Invalid Input Style
+  &.invalid,
+  &:focus.invalid {
+    @extend %invalid-input-style;
+  }
+
+  // Custom Error message
+  &.invalid ~ .helper-text:after,
+  &:focus.invalid ~ .helper-text:after {
+    @extend %custom-error-message;
+  }
+  &:focus.invalid ~ label {
+    color: $input-error-color;
+  }
+
+  // Full width label when using validate for error messages
+  &.validate + label {
+    width: 100%;
+  }
+
+  // Form Message Shared Styles
+  & + label:after {
+    @extend %input-after-style;
+  }
+}
 
 /* Search Field */
 

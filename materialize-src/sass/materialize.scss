@@ -45,6 +45,7 @@
   color: #ff9800;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
     'Helvetica Neue', sans-serif;
+  // padding: 1px;
 }
 
 .secondaryText {
@@ -53,29 +54,35 @@
     'Helvetica Neue', sans-serif;
 }
 
+.homeForm {
+  // padding-left: 30px
+}
+
 .homeImage {
   width: 100%;
+  // margin: 10px;
 }
 
 .textColumn {
   padding: 0 15px;
   font-size: 1.25rem;
-  
 }
 
 .columnHeader {
   font-size: 1.64rem;
   line-height: 110%;
-  margin: 1.0933333333rem 0 .656rem 0;
+  margin: 1.0933333333rem 0 0.656rem 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
-'Helvetica Neue';
+    'Helvetica Neue';
 }
 
 .textIcon {
   color: #03a9f4;
 }
 
-
+.footerText {
+  font-size: 15px;
+}
 
 // textarea.materialize-textarea {
 //   // background-color: white;
