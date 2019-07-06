@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 import '../materialize-src/sass/materialize.scss';
 import '../materialize-src/js/bin/materialize.js';
@@ -25,6 +26,7 @@ import image1 from 'arif-riyanto-974674-unsplash.jpg';
 import image2 from 'chris-ried-512801-unsplash.jpg';
 
 import firebase from 'firebase';
+import AboutUs from 'AboutUs';
 
 
 class Home extends React.Component {
@@ -70,14 +72,16 @@ class Home extends React.Component {
       return (
         <div>
           <Navbar brand={<a />} alignLinks="right">
-            <NavItem href="">Getting started</NavItem>
+            <Link to="/about">About Us</Link>
+            <NavItem href="/about">Getting started</NavItem>
             <NavItem href="components.html">Components</NavItem>
           </Navbar>
   
           <br />
-          {/* <Parallax image={<img src={image1} />} options={10000}/> */}
           <Container>
             <Section>
+            
+
               <Row className="homeForm">
                 <Col l={6} offset="l">
                   <Row>
@@ -181,7 +185,7 @@ class Home extends React.Component {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et
                         efficitur velit. Proin mattis neque a enim sollicitudin, id tincidunt eros
                         faucibus. Curabitur vitae tellus sollicitudin, venenatis massa sed, blandit
-                        mauris. Cras lacinia id ante ac ultrices. Sed ac ex iaculis, convallis turpis
+                        mauris. Cras lacinia i ante ac ultrices. Sed ac ex iaculis, convallis turpis
                         scelerisque, ullamcorper justo.
                       </p>
                     </div>

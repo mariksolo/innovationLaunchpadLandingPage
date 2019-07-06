@@ -55,7 +55,7 @@ module.exports = {
   resolve: {
     modules: [path.resolve(__dirname, 'src'), 'node_modules']
   },
-  devServer: { contentBase: path.join(__dirname, 'src') },
+  devServer: { contentBase: path.join(__dirname, 'src'), historyApiFallback: true, },
   module: {
     rules: [
       {
