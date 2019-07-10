@@ -7,7 +7,7 @@ import { Row, Col, CardPanel } from 'react-materialize';
 class AboutCard extends React.Component {
   render() {
     return (
-      <CardPanel className="teal">
+      <CardPanel className="teal" >
         <br />
 
         <span className="white-text">
@@ -16,24 +16,13 @@ class AboutCard extends React.Component {
               <br />
               <br />
 
-              <p className="personName">Mark Solomonik</p>
-              <p className="title">Vice President</p>
+              <p className="personName">{this.props.personName}</p>
+              <p className="title">{this.props.title}</p>
             </Col>
-            <Col>
-              <img
-                src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/NafSadh_Profile.jpg/768px-NafSadh_Profile.jpg"
-                width="200"
-              />
-            </Col>
+            <Col>{this.props.imgTag}</Col>
 
             <Col m={6}>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate
-                eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit
-                tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie
-                elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis
-                pretium sit amLorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
+              <p>{this.props.bio}</p>
             </Col>
           </Row>
         </span>
