@@ -7,7 +7,7 @@ import { Row, Col, CardPanel } from 'react-materialize';
 class AboutCard extends React.Component {
   render() {
     return (
-      <CardPanel className="teal" >
+      <CardPanel className="teal">
         <br />
 
         <span className="white-text">

@@ -16,6 +16,7 @@ import {
   Section,
   Footer
 } from 'react-materialize';
+import collinHeadshot from './collin.jpg';
 
 import firebase from 'firebase';
 
@@ -182,7 +183,89 @@ class Home extends React.Component {
                 </Col>
               </Row>
             </Section>
+            <Section>
+              <h3 className="center">Our Team</h3>
+              <Row className="imageRow">
+                <Col className="imageColumn center" offset="l">
+                  <img src={collinHeadshot} />
+                  <h5>Collin Qian</h5>
+                  <h6>Chief Marketing Officer</h6>
+                  <br />
+                  <img src={collinHeadshot} />
+                  <h5>Collin Qian</h5>
+                  <h6>Chief Marketing Officer</h6>
+                  <br />
+                  <img src={collinHeadshot} />
+                  <h5>Collin Qian</h5>
+                  <h6>Chief Marketing Officer</h6>
+                  <br />
+                </Col>
+
+                <Col className="imageColumn">
+                  <img src={collinHeadshot} />
+                  <h5>Collin Qian</h5>
+                  <h6>Chief Marketing Officer</h6>
+                  <br />
+                  <img src={collinHeadshot} />
+                  <h5>Collin Qian</h5>
+                  <h6>Chief Marketing Officer</h6>
+                  <br />
+                  <img src={collinHeadshot} />
+                  <h5>Collin Qian</h5>
+                  <h6>Chief Marketing Officer</h6>
+                  <br />
+                </Col>
+                <Col className="imageColumn">
+                  <img src={collinHeadshot} />
+                  <h5>Collin Qian</h5>
+                  <h6>Chief Marketing Officer</h6>
+                  <br />
+                  <img src={collinHeadshot} />
+                  <h5>Collin Qian</h5>
+                  <h6>Chief Marketing Officer</h6>
+                  <br />
+                  <img src={collinHeadshot} />
+                  <h5>Collin Qian</h5>
+                  <h6>Chief Marketing Officer</h6>
+                  <br />
+                </Col>
+
+                <Col className="imageColumn">
+                  <img src={collinHeadshot} />
+                  <h5>Collin Qian</h5>
+                  <h6>Chief Marketing Officer</h6>
+                  <br/>
+                  <img src={collinHeadshot} />
+                  <h5>Collin Qian</h5>
+                  <h6>Chief Marketing Officer</h6>
+                  <br/>
+                  <img src={collinHeadshot} />
+                  <h5>Collin Qian</h5>
+                  <h6>Chief Marketing Officer</h6>
+                  <br/>
+                </Col>
+              </Row>
+            </Section>
           </Container>
+
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          {/* <Container>
+            <Section className="aboutUs">
+            <div className="center">
+              <h3>About Us</h3>
+            </div>
+              
+              <p className="textColumn light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et
+                      efficitur velit. Proin mattis neque a enim sollicitudin, id tincidunt eros
+                      faucibus. Curabitur vitae tellus sollicitudin, venenatis massa sed, blandit
+                      mauris. Cras lacinia i ante ac ultrices. Sed ac ex iaculis, convallis turpis
+                      scelerisque, ullamcorper justo.</p>
+            </Section> */}
+          {/* </Container> */}
         </div>
 
         <Footer className="orange">

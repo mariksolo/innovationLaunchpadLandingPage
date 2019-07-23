@@ -153,12 +153,12 @@ $dropdown-item-height: 50px !default;
 
 // Text Inputs + Textarea
 $input-height: 3rem !default;
-$input-border-color: color('grey', 'base') !default;
+$input-border-color: white !default; // was : color('grey', 'base') !default;
 $input-border: 1px solid $input-border-color !default;
 $input-background: #fff !default;
 $input-error-color: $error-color !default;
 $input-success-color: $success-color !default;
-$input-focus-color: $secondary-color !default;
+$input-focus-color: white !default; // was : $secondary-color !default;
 $input-font-size: 16px !default;
 $input-margin-bottom: 8px;
 $input-margin: 0 0 $input-margin-bottom 0 !default;
@@ -169,7 +169,7 @@ $input-disabled-solid-color: #949494 !default;
 $input-disabled-border: 1px dotted $input-disabled-color !default;
 $input-invalid-border: 1px solid $input-error-color !default;
 $input-icon-size: 2rem;
-$placeholder-text-color: lighten($input-border-color, 20%) !default;
+$placeholder-text-color: white !default; // was : lighten($input-border-color, 20%) !default
 
 // Radio Buttons
 $radio-fill-color: $secondary-color !default;
@@ -185,9 +185,9 @@ $track-height: 3px !default;
 $select-border: 1px solid #f2f2f2 !default;
 $select-background: rgba(255, 255, 255, 0.9) !default;
 $select-focus: 1px solid lighten($secondary-color, 47%) !default;
-$select-option-hover: rgba(0, 0, 0, 0.08) !default;
-$select-option-focus: rgba(0, 0, 0, 0.08) !default;
-$select-option-selected: rgba(0, 0, 0, 0.03) !default;
+$select-option-hover: white !default; // was : rgba(0, 0, 0, 0.08) !default
+$select-option-focus: white !default; // was : rgba(0, 0, 0, 0.08) !default
+$select-option-selected: white !default; // was : rgba(0, 0, 0, 0.08) !default
 $select-padding: 5px !default;
 $select-radius: 2px !default;
 $select-disabled-color: rgba(0, 0, 0, 0.3) !default;
