@@ -14,11 +14,17 @@ import {
   TextInput,
   Container,
   Section,
-  Footer
+  Footer,
+  Tabs,
+  Tab
 } from 'react-materialize';
 import collinHeadshot from './collin.jpg';
+import innovationlaunchpad from './innovationl.png';
 
 import firebase from 'firebase';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
+import CustomNavMenu from './CustomNavMenu';
 
 class Home extends React.Component {
   constructor(props) {
@@ -26,24 +32,52 @@ class Home extends React.Component {
 
     this.state = {
       email: '',
-      name: ''
+      name: '',
+      loadCols: false
     };
   }
-
+  componentDidMount = () => {
+    window.addEventListener('scroll', this.handleScroll);
+  };
+  handleScroll = () => {
+    const windowHeight =
+      'innerHeight' in window ? window.innerHeight : document.documentElement.offsetHeight;
+    const body = document.body;
+    const html = document.documentElement;
+    const docHeight = Math.max(
+      body.scrollHeight,
+      body.offsetHeight,
+      html.clientHeight,
+      html.scrollHeight,
+      html.offsetHeight
+    );
+    const windowBottom = windowHeight + window.pageYOffset;
+    if (windowBottom >= docHeight * 0.4) {
+      console.log('bottom reached');
+      this.setState({
+        loadCols: true
+      });
+    }
+  };
   handleChange = event => {
     this.setState({ [event.target.id]: event.target.value });
   };
+  handleNav = () => {};
 
   handleSubmit = event => {
-    const firebaseConfig = {
-      apiKey: 'AIzaSyAj-wIECBgzRGqioRROXXM467dgrFVOImk',
-      authDomain: 'illandingpage.firebaseapp.com',
-      databaseURL: 'https://illandingpage.firebaseio.com',
-      projectId: 'illandingpage',
-      storageBucket: 'illandingpage.appspot.com'
-    };
+    console.log('handle submit');
 
-    firebase.initializeApp(firebaseConfig);
+    try {
+      const firebaseConfig = {
+        apiKey: 'AIzaSyAj-wIECBgzRGqioRROXXM467dgrFVOImk',
+        authDomain: 'illandingpage.firebaseapp.com',
+        databaseURL: 'https://illandingpage.firebaseio.com',
+        projectId: 'illandingpage',
+        storageBucket: 'illandingpage.appspot.com'
+      };
+
+      firebase.initializeApp(firebaseConfig);
+    } catch (e) {}
 
     var db = firebase.firestore();
 
@@ -58,37 +92,43 @@ class Home extends React.Component {
       .catch(function(error) {
         console.error('Error adding document: ', error);
       });
+
+    this.setState({
+      name: '',
+      email: ''
+    });
   };
   render() {
+    let infoOne = 'info';
+    let infoTwo = 'info';
+    let infoThree = 'info';
+
+    if (this.state.loadCols) {
+      infoOne = 'infoOne';
+      infoTwo = 'infoTwo';
+      infoThree = 'infoThree';
+    }
     return (
       <div>
-        <Navbar brand={<a />} alignLinks="right">
-          <Link to="/about">About Us</Link>
-          <NavItem href="/about">Getting started</NavItem>
-          <NavItem href="components.html">Components</NavItem>
-        </Navbar>
-
         <br />
         <Container>
           <Section>
             <Row className="homeForm">
               <Col l={6} offset="l">
+                <div />
                 <Row>
                   <br />
                   <br />
                   <br />
                   <br />
                   <br />
-                  <h1 className="mainText">
-                    Try the world's #1 CRM built for small business growth.
-                  </h1>
-
-                  {/* <FlareComponent width={200} height={200}  file="logoAnimation.flr"/> */}
+                  <h2 className="mainText">
+                    Preparing high school students to flourish in business and technology
+                  </h2>
                 </Row>
                 <Row>
                   <h5 className="secondaryText">
-                    Get Salesforce essentials, our all-in-one sales and service solution for just
-                    $25 a month.
+                    Subscribe to our email list to hear about news, events, and workshops.
                   </h5>
                 </Row>
                 <Row>
@@ -97,6 +137,7 @@ class Home extends React.Component {
                     id="name"
                     className="textArea"
                     onChange={this.handleChange}
+                    value={this.state.name}
                   />
 
                   <TextInput
@@ -107,13 +148,30 @@ class Home extends React.Component {
                     className="textArea"
                     onChange={this.handleChange}
                     type="front"
+                    value={this.state.email}
                   />
                 </Row>
                 <Row>
                   <Button waves="light" onClick={this.handleSubmit}>
-                    button
+                    Subscribe
                   </Button>
                 </Row>
+              </Col>
+              <Col>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <ReactCSSTransitionGroup
+                  transitionName="anim"
+                  transitionAppear={true}
+                  transitionAppearTimeout={5000}
+                  transitionEnter={false}
+                  transitionLeave={false}
+                >
+                  <img src={innovationlaunchpad} />
+                </ReactCSSTransitionGroup>
               </Col>
             </Row>
           </Section>
@@ -127,7 +185,7 @@ class Home extends React.Component {
             <Section>
               <Row>
                 <Col m={4}>
-                  <div>
+                  <div className={infoOne}>
                     <div className="center">
                       <Icon medium className="textIcon">
                         {' '}
@@ -146,7 +204,7 @@ class Home extends React.Component {
                 </Col>
 
                 <Col m={4}>
-                  <div>
+                  <div className={infoTwo}>
                     <div className="center">
                       <Icon medium className="textIcon">
                         code
@@ -164,7 +222,7 @@ class Home extends React.Component {
                 </Col>
 
                 <Col m={4}>
-                  <div>
+                  <div className={infoThree}>
                     <div className="center">
                       <Icon medium className="textIcon">
                         next_week
@@ -234,15 +292,15 @@ class Home extends React.Component {
                   <img src={collinHeadshot} />
                   <h5>Collin Qian</h5>
                   <h6>Chief Marketing Officer</h6>
-                  <br/>
+                  <br />
                   <img src={collinHeadshot} />
                   <h5>Collin Qian</h5>
                   <h6>Chief Marketing Officer</h6>
-                  <br/>
+                  <br />
                   <img src={collinHeadshot} />
                   <h5>Collin Qian</h5>
                   <h6>Chief Marketing Officer</h6>
-                  <br/>
+                  <br />
                 </Col>
               </Row>
             </Section>
@@ -253,40 +311,12 @@ class Home extends React.Component {
           <br />
           <br />
           <br />
-          {/* <Container>
-            <Section className="aboutUs">
-            <div className="center">
-              <h3>About Us</h3>
-            </div>
-              
-              <p className="textColumn light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et
-                      efficitur velit. Proin mattis neque a enim sollicitudin, id tincidunt eros
-                      faucibus. Curabitur vitae tellus sollicitudin, venenatis massa sed, blandit
-                      mauris. Cras lacinia i ante ac ultrices. Sed ac ex iaculis, convallis turpis
-                      scelerisque, ullamcorper justo.</p>
-            </Section> */}
-          {/* </Container> */}
         </div>
 
         <Footer className="orange">
-          <Container>
-            <Row>
-              <Col l={8} s={12}>
-                <h5 className="white-text">Company Bio</h5>
-                <p className="grey-text text-lighten-4 footerText">
-                  We are a team of college students working on this project like it's our full time
-                  job. Any amount would help support and continue development on this project and is
-                  greatly appreciated.
-                </p>
-              </Col>
-
-              <Col l={4}>
-                <h5>Contact Us</h5>
-                <p>marik.solomonik@gmail.com</p>
-                <p>billyihang@gmail.com</p>
-              </Col>
-            </Row>
-          </Container>
+          {/* <Container> */}
+          <p>© Copyright 2019, Innovation Launchpad. All Rights Reserved. EIN: 83-2770147</p>
+          <p>Contact: team.innovationlaunchpad@gmail.com</p>
         </Footer>
       </div>
     );

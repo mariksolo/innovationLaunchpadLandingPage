@@ -41,8 +41,53 @@
 @import 'components/timepicker';
 
 // added
+.anim-appear {
+  opacity: 0.01;
+}
+ 
+.anim-appear.anim-appear-active{
+  opacity: 2;
+  transition: opacity 5s ease-in;
+}
+
+@keyframes center {
+  from {opacity: 0;}
+  to {opacity: 1;}
+  
+}
+
+.info {
+  opacity: 0;
+}
+.infoOne {
+  opacity: 0;
+  animation-name: center;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;  
+}
+.infoTwo {
+  opacity: 0;
+  animation-name: center;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;  
+}
+.infoThree {
+  opacity: 0;
+  animation-name: center;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;  
+}
+
+.mainTabs {
+  position: relative;
+  float: right;
+}
+
 .mainText {
-  color: orange;
+  color: #ffa500;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
     'Helvetica Neue', sans-serif;
   // padding: 1px;
@@ -91,17 +136,28 @@
   font-size: 15px;
 }
 
-:root {
-  background-image: 'arif-riyanto-974674-unsplash';
-}
+// :root {
+//   background-image: 'arif-riyanto-974674-unsplash';
+// }
 
-body {
-  background: url('../../src/antonino-visalli-1318777-unsplash.jpg');
+// body {
+//   background: url('../../src/original.jpg');
+//   background-attachment: fixed;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// }
+.mainTab {
+  background: url('../../src/original.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 600px;
+    height: auto !important;
+    height: 600px;
 }
+
 
 .textArea {
   color: white;
