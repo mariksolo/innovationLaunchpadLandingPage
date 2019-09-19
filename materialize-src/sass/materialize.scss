@@ -56,6 +56,125 @@
   
 }
 
+@keyframes logoAnimation {
+  // from {margin-bottom: 0px;}
+  // to {margin-bottom: 50px}
+  // from {top: 250px}
+  // to {top: -200px}
+  from {transform: translate3d(0px, 0px, 0px);}
+  to {transform: translate3d(0px, -500px, 0px);}
+
+}
+
+@keyframes logoSpin {
+  100% { -moz-transform: rotate(360deg);
+          // background-color: red;
+     }
+}
+
+@keyframes appear {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+@keyframes moveLogoUp {
+  // from {transform: translate3d(0px, 300px, 0px);}
+  // to {transform: translate3d(0px, 0px, 0px);}
+  from {top: 300px;}
+  to {top: 90px;}
+}
+.mainImageContainer {
+  // background: url('https://elestoque.org/wp-content/uploads/2019/03/DSC_0022-copy.jpg');
+  // background-color: red;
+  // float: center;
+}
+.mainImageBox {
+  z-index: 0;
+  margin-bottom: -15px;
+  // margin-left: -15px;
+  
+}
+.formBox {
+ 
+  font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  
+  text-transform: uppercase;
+  line-height: 3.625rem;
+  font-size: 3rem;
+  // margin-left: 100px;
+}
+
+.formButton {
+  margin-left: 10px;
+}
+
+.contentSide{
+  margin-bottom: 50px;
+  line-height: 1.11em;
+  letter-spacing: -1px;
+  font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  font-weight: 500;
+  padding: 50px;
+  background-color: #0053a2;
+  height: 5000px;
+}
+
+.leftText {
+  margin: 150px;
+  margin-left: 300px;
+  margin-top: 225px;
+  color: white;
+  
+}
+
+.rightText{
+  font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  // margin: 30px;
+  margin-top: 50px;
+  // padding: 50px;
+  
+}
+
+.formSide{
+  background-color: white;
+}
+
+.wholeLogo {
+  // animation: moveLogoUp 2s;
+}
+
+.emptyLogo {
+  position: absolute;
+  // transform: translate3d(0px, 300px, 0px);
+  top: 300px;
+  animation: moveLogoUp 2s forwards;
+  animation-delay: 5s;
+}
+
+.rocketLogo {
+  position: absolute;
+  
+  
+  transform: rotateZ(50deg);
+  // transform: translate3d(0px, 300px, 0px);
+  top: 300px;
+  animation: logoSpin 2s normal, logoAnimation 3s, moveLogoUp 2s forwards;
+  animation-delay: 0s, 2s, 5s
+}
+
+.appearingContent {
+  opacity: 0;
+  animation: appear 2s forwards;
+  animation-delay: 5s;
+  
+}
+.logoImage {
+  padding-left: 100px;
+  // margin-top: 250px;
+  margin-top: 50px;
+  margin-bottom: 200px;
+}
+
 .info {
   opacity: 0;
 }
@@ -148,20 +267,21 @@
 //   background-size: cover;
 // }
 .mainTab {
-  background: url('../../src/original.jpg');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 600px;
-    height: auto !important;
-    height: 600px;
+  // background: url('../../src/original.jpg');
+  // background: url('https://res.cloudinary.com/dzwsfuvak/image/upload/v1567984992/original_ioganl.jpg');
+  // background-attachment: fixed;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // min-height: 600px;
+  //   height: auto !important;
+  //   height: 600px;
 }
 
 
-.textArea {
-  color: white;
-}
+// .textArea {
+//   color: white;
+// }
 
 .personName {
   font-size: 110%;
