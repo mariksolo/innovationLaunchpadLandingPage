@@ -102,77 +102,66 @@ class Home extends React.Component {
     });
   };
   render() {
-    
     return (
       <div>
         <div>
-
           <Row>
             <Col m={7} className="contentSide">
-            <Section>
-            <h1 className="leftText">
-              Preparing high school students to flourish in business and technology
-              </h1>
-            </Section>
-              
+              <Section>
+                <h1 className="leftText">
+                  Preparing high school students to flourish in business and technology
+                </h1>
+              </Section>
             </Col>
-            <Col m ={5} className="formSide">
+
+            <Col m={5} s={0} className="formSide">
               <Row className="logoImage">
-
-              <Col m ={3}></Col>
-              <Col m ={6} className="wholeLogo">
-                  <img className = "emptyLogo" src={emptyLogo} width="10%"></img>
-                  <img className="rocketLogo rocketLogo2" src={rotatedRocketLogo} width="10%"></img>
-              </Col>
-              <Col m ={3}></Col>
-                
-                
-                  
-                  
-                
-
-              </Row>
-            <Row className="appearingContent">
-              <Col m ={3}></Col>
-              <Col m ={6}><p className="rightText">
-                Subscribe to our email list to hear about news, events, and workshops.
-                </p></Col>
-              <Col m ={3}></Col>
-            
-            </Row>
-            <Row className="appearingContent">
-                <Col m ={4}></Col>
-                <Col m = {5} className="formBox">
-                
-                      <TextInput
-                        label="Full Name"
-                        id="name"
-                        className="textArea"
-                        onChange={this.handleChange}
-                        value={this.state.name}
-                      />
-
-                      <TextInput
-                        email
-                        label="Email"
-                        id="email"
-                        error="Invalid Email"
-                        className="textArea"
-                        onChange={this.handleChange}
-                        type="front"
-                        value={this.state.email}
-                      />
-
-                      <Button className="formButton">Subscribe</Button>
+                <Col m={3} />
+                <Col m={6} className="wholeLogo">
+                  <img className="emptyLogo" src={emptyLogo} width="10%" />
+                  <img className="rocketLogo rocketLogo2" src={rotatedRocketLogo} width="10%" />
                 </Col>
-                <Col m ={3}></Col>
-                
-                    
-            </Row>
-            
+
+                <Col m={3} />
+              </Row>
+              <Row className="appearingContent">
+                <Col m={3} />
+                <Col m={6}>
+                  <p className="rightText">
+                    Subscribe to our email list to hear about news, events, and workshops.
+                  </p>
+                </Col>
+                <Col m={3} />
+              </Row>
+              <Row className="appearingContent">
+                <Col m={4} />
+                <Col m={5} className="formBox">
+                  <TextInput
+                    label="Full Name"
+                    id="name"
+                    className="textArea"
+                    onChange={this.handleChange}
+                    value={this.state.name}
+                  />
+
+                  <TextInput
+                    email
+                    label="Email"
+                    id="email"
+                    error="Invalid Email"
+                    className="textArea"
+                    onChange={this.handleChange}
+                    type="front"
+                    value={this.state.email}
+                  />
+
+                  <Button className="formButton">Subscribe</Button>
+                </Col>
+                <Col m={3} />
+              </Row>
             </Col>
           </Row>
-        {/* <Container className="mainImageContainer">
+          {/* <Container className="mainImageContainer">
           <Section className="mainImageSection"> */}
           {/* <Row>
             <Col m ={6} className="formBox">
@@ -184,7 +173,7 @@ class Home extends React.Component {
               </Section>
             </Container>
              */}
-{/*              
+          {/*              
             </Col>
             <Col m ={6} className="mainImageBox">
               <img className="mainImage" src="https://elestoque.org/wp-content/uploads/2019/03/DSC_0022-copy.jpg" width="100%"/>
@@ -207,18 +196,15 @@ class Home extends React.Component {
 
              </Row> 
            */}
-          
-          
-            
+
           {/* </Section>
         </Container> */}
-        <br />
+          <br />
           <br />
           <br />
           <br />
           <br />
         </div>
-        
 
         <Footer className="orange">
           {/* <Container> */}

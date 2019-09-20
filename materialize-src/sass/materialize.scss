@@ -67,7 +67,10 @@
 }
 
 @keyframes logoSpin {
-  100% { -moz-transform: rotate(360deg);
+  100% { transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
           // background-color: red;
      }
 }
@@ -108,6 +111,19 @@
   margin-left: 10px;
 }
 
+@media screen and (max-width: 1024px) {
+  .logoImage {
+      display: none !important;
+  }
+
+  .appearingContent {
+    opacity: 1 !important;
+    
+    
+  }
+  
+}
+
 .contentSide{
   margin-bottom: 50px;
   line-height: 1.11em;
@@ -116,12 +132,12 @@
   font-weight: 500;
   padding: 50px;
   background-color: #0053a2;
-  height: 5000px;
+  // height: 5000px;
 }
 
 .leftText {
-  margin: 150px;
-  margin-left: 300px;
+  margin-bottom: 150px;
+  // margin-left: 300px;
   margin-top: 225px;
   color: white;
   
@@ -155,7 +171,10 @@
   position: absolute;
   
   
-  transform: rotateZ(50deg);
+  transform: rotate(50deg);
+  -webkit-transform: rotate(50deg);
+  -moz-transform: rotate(50deg);
+  -o-transform: rotate(50deg);
   // transform: translate3d(0px, 300px, 0px);
   top: 300px;
   animation: logoSpin 2s normal, logoAnimation 3s, moveLogoUp 2s forwards;

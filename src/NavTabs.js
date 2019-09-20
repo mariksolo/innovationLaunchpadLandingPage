@@ -14,38 +14,34 @@ export default class NavTabs extends React.Component {
   }
 
   render() {
-    if (this.props.sgs ) {
+    if (this.props.sgs) {
       return (
         <div>
-        
-        <Tabs className="mainTabs z-depth-1 " >
-          <Tab title="Seniors get Savvy" className="SgSTab" active>
-            Seniors get Savvy!
-          </Tab>
-  
-          <Tab title="Home" className="mainTab">
-            <Home />
-          </Tab>
-        </Tabs>
-      </div>
+          <Tabs className="mainTabs z-depth-1 ">
+            <Tab title="Seniors get Savvy" className="SgSTab" active>
+              Seniors get Savvy!
+            </Tab>
+
+            <Tab title="Home" className="mainTab">
+              <Home />
+            </Tab>
+          </Tabs>
+        </div>
       );
     } else {
       return (
         <div>
-        
-        <Tabs className="mainTabs z-depth-1 " >
-          <Tab title="Seniors get Savvy" className="SgSTab">
-            Seniors get Savvy!
-          </Tab>
-  
-          <Tab title="Home" className="mainTab" active>
-            <Home />
-          </Tab>
-        </Tabs>
-      </div>
+          <Tabs className="mainTabs z-depth-1 ">
+            <Tab title="Seniors get Savvy" className="SgSTab">
+              Seniors get Savvy!
+            </Tab>
+
+            <Tab title="Home" className="mainTab" active>
+              <Home />
+            </Tab>
+          </Tabs>
+        </div>
       );
     }
-    
-    
   }
 }
