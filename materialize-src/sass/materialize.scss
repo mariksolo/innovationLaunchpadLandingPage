@@ -111,36 +111,142 @@
   margin-left: 10px;
 }
 
+
+.leftTitleText {
+  
+  margin-left: 160px;
+  margin-right: 160px;
+  // margin-bottom: 150px;
+  // margin-left: 300px;
+  margin-top: 225px;
+  
+  
+  color: #DDF2F1;
+  
+}
+
+.leftSubText {
+  // margin: 150px;
+  margin-bottom: 400px;
+  margin-left: 150px;
+  margin-right: 300px;
+  // margin-top: 225px;
+  
+  color: white;
+}
+
+.logoImage {
+  padding-left: 100px;
+  // margin-top: 250px;
+  margin-top: 50px;
+  margin-bottom: 200px;
+}
+
+.sectionTitle {
+  font-family: "Verdana", "Geneva", "sans-serif";
+  margin: 50px;
+  
+}
+
+.sectionParagraph {
+  font-family: "Verdana", "Geneva", "sans-serif";
+  margin: 55px;
+}
+.row1 {
+  color: #17252A;
+  padding-left: 150px;
+  
+}
+.row2 {
+  padding-right: 150px;
+  color: #DDF2F1;
+}
+.row3 {
+  padding-left: 150px;
+  color: #17252A;
+}
+@media screen and (max-width: 1500px) {
+  .logoImage {
+    margin-bottom: 150px;
+    
+  }
+
+  .formBox {
+ 
+    margin: 0px;
+  }
+}
 @media screen and (max-width: 1024px) {
+  
   .logoImage {
       display: none !important;
   }
 
   .appearingContent {
     opacity: 1 !important;
-    
-    
   }
+  .leftTitleText {
+    margin-left: 10px;
+    margin-right: 10px;
+  
+    margin-top: 75px;
+    
+    // color: white;
+    font-size: 2.5rem
+  }
+
+  .leftSubText {
+    // margin: 150px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    // margin-top: 225px;
+    font-size: 1.5rem;
+    
+    // color: white;
+  }
+  
   
 }
 
 .contentSide{
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
   line-height: 1.11em;
   letter-spacing: -1px;
   font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
   font-weight: 500;
-  padding: 50px;
+  // padding: 50px;
+  
   background-color: #0053a2;
   // height: 5000px;
 }
 
-.leftText {
-  margin-bottom: 150px;
-  // margin-left: 300px;
-  margin-top: 225px;
-  color: white;
+
+
+.row1 {
+  background-color: #5994FF;
+  height: 500px;
+  margin-top: -20px;
+}
+
+.row2 {
+  background-color: #3D4490;
+  height: 500px;
+  margin-top: -20px;
+}
+
+.row3 {
   
+  background-color: #83C3FF;
+  height: 500px;
+  margin-top: -20px;
+
+}
+
+.row4 {
+  background-color: #4F526F;
+  height: 500px;
+  margin-top: -20px;
 }
 
 .rightText{
@@ -155,9 +261,7 @@
   background-color: white;
 }
 
-.wholeLogo {
-  // animation: moveLogoUp 2s;
-}
+
 
 .emptyLogo {
   position: absolute;
@@ -187,12 +291,7 @@
   animation-delay: 5s;
   
 }
-.logoImage {
-  padding-left: 100px;
-  // margin-top: 250px;
-  margin-top: 50px;
-  margin-bottom: 200px;
-}
+
 
 .info {
   opacity: 0;

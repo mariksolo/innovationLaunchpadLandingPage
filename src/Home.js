@@ -108,9 +108,13 @@ class Home extends React.Component {
           <Row>
             <Col m={7} className="contentSide">
               <Section>
-                <h1 className="leftText">
-                  Preparing high school students to flourish in business and technology
+                <h1 className="leftTitleText">
+                  Jumpstart your future career with Innovation Launchpad
                 </h1>
+                <h5 className="leftSubText">
+                  Innovation Launchpad is a 501(c)(3) non-profit dedicated to preparing high school
+                  students to flourish in business and technology
+                </h5>
               </Section>
             </Col>
 
@@ -161,44 +165,41 @@ class Home extends React.Component {
               </Row>
             </Col>
           </Row>
-          {/* <Container className="mainImageContainer">
-          <Section className="mainImageSection"> */}
-          {/* <Row>
-            <Col m ={6} className="formBox">
-            {/* <Container className="formBox">
-              <Section className="formBox">
-                <h3>
-                Preparing high school students to flourish in business and technology
-                </h3>
-              </Section>
-            </Container>
-             */}
-          {/*              
+          <Row className="row1">
+            <Col m={3}>
+              <h3 className="sectionTitle">Entrepreneurship</h3>
+              <h5 className="sectionParagraph">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et efficitur
+                velit. Proin mattis neque a enim sollicitudin, id tincidunt eros faucibus. Curabitur
+                vitae tellus sollicitudin,
+              </h5>
             </Col>
-            <Col m ={6} className="mainImageBox">
-              <img className="mainImage" src="https://elestoque.org/wp-content/uploads/2019/03/DSC_0022-copy.jpg" width="100%"/>
-            </Col>
- 
-            <Col m ={0}>
-             </Col>
+            <Col m={9} />
           </Row>
-          <Row >
-            <Col m ={4}>
+          <Row className="row2">
+            <Col m={9} />
+            <Col m={3}>
+              <h3 className="sectionTitle">Technology</h3>
+              <h5 className="sectionParagraph">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et efficitur
+                velit. Proin mattis neque a enim sollicitudin, id tincidunt eros faucibus. Curabitur
+                vitae tellus sollicitudin,
+              </h5>
             </Col>
-            <Col m={4}className="formBox">
-              
-              <h3>
-              Preparing high school students to flourish in business and technology
-              </h3>
+          </Row>
+          <Row className="row3">
+            <Col m={3}>
+              <h3 className="sectionTitle">Opportunities</h3>
+              <h5 className="sectionParagraph">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et efficitur
+                velit. Proin mattis neque a enim sollicitudin, id tincidunt eros faucibus. Curabitur
+                vitae tellus sollicitudin,
+              </h5>
             </Col>
-            <Col m ={4}>
-            </Col>
+            <Col m={9} />
+          </Row>
+          <Row className="row4" />
 
-             </Row> 
-           */}
-
-          {/* </Section>
-        </Container> */}
           <br />
           <br />
           <br />
